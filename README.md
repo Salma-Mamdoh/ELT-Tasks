@@ -15,10 +15,12 @@ This project demonstrates how to create an ETL (Extract, Transform, Load) pipeli
     - [Problem Statement](#problem-statement-1)
     - [Solution](#solution-1)
     - [Step-by-Step Implementation](#step-by-step-implementation-1)
-4. [Problem 3: Title of Problem 3](#problem-3-title-of-problem-3)
+    - [SSIS Package Screenshot](#ssis-package-screenshot)
+4. [Problem 3: Load Source Data to a Target Table Using Versioning](#problem-3-load-source-data-to-a-target-table-using-versioning)
     - [Problem Statement](#problem-statement-2)
     - [Solution](#solution-2)
     - [Step-by-Step Implementation](#step-by-step-implementation-2)
+    - [Screenshot](#screenshot)
 5. [Problem 4: Title of Problem 4](#problem-4-title-of-problem-4)
     - [Problem Statement](#problem-statement-3)
     - [Solution](#solution-3)
@@ -83,9 +85,10 @@ To implement SCD Type 4 and incremental load, we'll create two target tables: `E
    - **SCD Type 4 Handling:** Maintains current and historical data for each employee.
    - **SSIS Components:** Utilizes Lookup Transformation, Conditional Split, Derived Column, and OLE DB Command.
 
-### SSIS Package Screenshot
+#### SSIS Package Screenshot
 
-![SSIS Package Screenshot](SSIS Package2.png)
+![SSIS Package Screenshot](SSIS_Package2.png)
+
 ---
 
 ## Problem 3: Load Source Data to a Target Table Using Versioning
@@ -120,14 +123,9 @@ The solution involves using SSIS to implement a versioning strategy for loading 
    - **Versioning Strategy:** Implements versioning to manage historical changes in the data.
    - **SSIS Components Used:** Lookup Transformation, Conditional Split, Derived Column, OLE DB Command (Insert and Update), and OLE DB Destination.
 
-### Screenshot
+#### Screenshot
 
-![SSIS Package](SSIS Package3.png)
-
----
-
-This SSIS package effectively handles the versioning of data from the `Employee_Q3` source table to the target table, ensuring accurate historical tracking of changes.
-
+![SSIS Package Screenshot](SSIS_Package3.png)
 
 ---
 
