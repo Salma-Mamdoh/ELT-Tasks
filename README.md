@@ -20,12 +20,12 @@ This project demonstrates how to create an ETL (Extract, Transform, Load) pipeli
     - [Problem Statement](#problem-statement-2)
     - [Solution](#solution-2)
     - [Step-by-Step Implementation](#step-by-step-implementation-2)
-    - [Screenshot](#screenshot)
+    - [SSIS Package Screenshot](#screenshot)
 5. [Problem 4: Attendance Device Data Integration](#problem-4-attendance-device-data-integration)
     - [Problem Statement](#problem-statement-3)
     - [Solution](#solution-3)
     - [Step-by-Step Implementation](#step-by-step-implementation-3)
-    - [Screenshot](#screenshot-1)
+    - [SSIS Package Screenshot](#screenshot-1)
 6. [Conclusion](#conclusion)
 
 ---
