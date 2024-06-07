@@ -47,7 +47,7 @@ To solve this problem, we use a Script Task in SSIS and write a C# script to con
 
 #### Set Up SSIS Package
 
-**Create a new SSIS package and add a Script Task; then click "Edit Script" to configure the C# script.**
+-**Create a new SSIS package and add a Script Task; then click "Edit Script" to configure the C# script.**
 
 #### C# Code Explanation
 
