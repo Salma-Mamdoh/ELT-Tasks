@@ -88,19 +88,46 @@ To implement SCD Type 4 and incremental load, we'll create two target tables: `E
 ![SSIS Package Screenshot](Problem2.png)
 ---
 
-## Problem 3: Title of Problem 3
+## Problem 3: Load Source Data to a Target Table Using Versioning
 
 ### Problem Statement
 
-...
+Load data from the `Employee_Q3` source table into a target table with versioning, as described below.
 
 ### Solution
 
-...
+The solution involves using SSIS to implement a versioning strategy for loading data from the source table `Employee_Q3` to a target table. This versioning strategy includes inserting new versions of records on the same day and closing all previous versions. On the next day, a new version starts from 1.
 
 ### Step-by-Step Implementation
 
-...
+1. **Create Target Table:**
+   - **Target_Table:** Emp_Key, ID, Name, City, Email, Insert_Date, Active_Flag, Version_No.
+
+2. **SSIS Package Overview:**
+   - **OLE DB Source:** Extracts data from `Employee_Q3`.
+   - **Lookup Transformation:** Matches data with existing records in the target table based on ID.
+     - **Lookup No Match Output:** Handles new records.
+     - **Lookup Match Output:** Handles existing records.
+   - **Conditional Split:**
+     - **In the Same Day:** Routes data for processing on the same day.
+     - **In Another Day:** Routes data for processing on another day.
+   - **Derived Column Transformation:** Sets the `Insert_Date` and manages the versioning of records.
+   - **OLE DB Command (Insert):** Inserts new records into the target table with the latest version number.
+   - **OLE DB Command (Update):** Updates the active flag and ends previous versions of records.
+   - **OLE DB Destination:** Loads the processed data into the target table.
+
+3. **Explanation:**
+   - **Versioning Strategy:** Implements versioning to manage historical changes in the data.
+   - **SSIS Components Used:** Lookup Transformation, Conditional Split, Derived Column, OLE DB Command (Insert and Update), and OLE DB Destination.
+
+### Screenshot
+
+![SSIS Package](path/to/your/screenshot.png)
+
+---
+
+This SSIS package effectively handles the versioning of data from the `Employee_Q3` source table to the target table, ensuring accurate historical tracking of changes.
+
 
 ---
 
