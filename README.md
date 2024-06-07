@@ -39,17 +39,13 @@ To solve this problem, we use a Script Task in SSIS and write a C# script to con
 
 #### Set Up SSIS Package
 
-1. **Create a new SSIS package:**
-   - Open SQL Server Data Tools (SSDT) or SQL Server Management Studio (SSMS).
-   - Create a new Integration Services Project.
-   - Right-click on the "SSIS Packages" folder and select "New SSIS Package".
+1. **Create a new SSIS package.**
 
-2. **Add a Script Task to the Control Flow:**
-   - Drag and drop a "Script Task" from the SSIS Toolbox onto the Control Flow design surface.
+2. **Add a Script Task to the Control Flow.**
 
-3. **Configure the Script Task:**
-   - Double-click on the Script Task to open the Script Task Editor.
-   - In the Script Task Editor, click on "Edit Script".
+3. **Configure the Script Task.**
+   - Click on "Edit Script".
+
 
 #### C# Code Explanation
 
