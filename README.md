@@ -167,7 +167,7 @@ State Description:
    - **State Calculation:** Determines the state of each attendance record based on specific conditions for arrival time and worked hours.
    - **SSIS Components Used:** Data Conversion, Conditional Split, Aggregate, Sort, Merge Join, Derived Column, and OLE DB Destination.
 
-### Screenshot
+#### Screenshot
 
 ![SSIS Package](SSIS_Package4.png)
 
@@ -175,9 +175,7 @@ State Description:
 
 This SSIS package effectively handles the transformation of data from the attendance device to the target table, ensuring accurate calculation of work hours and state descriptions based on arrival times.
 
-
 ## Conclusion
 
 In conclusion, this project demonstrates the versatility of SSIS in handling various data integration challenges. Each problem showcases a different aspect of SSIS functionality, from consuming APIs to transforming data and loading it into a database.
 
----
