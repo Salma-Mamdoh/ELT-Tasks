@@ -51,3 +51,20 @@ CREATE TABLE University (
     Country NVARCHAR(255),
     AlphaTwoCode NVARCHAR(10)
 );
+#### Set Up SSIS Package
+
+1. **Create a new SSIS package:**
+   - Open SQL Server Data Tools (SSDT) or SQL Server Management Studio (SSMS).
+   - Create a new Integration Services Project.
+   - Right-click on the "SSIS Packages" folder and select "New SSIS Package".
+
+2. **Add a Script Task to the Control Flow:**
+   - Drag and drop a "Script Task" from the SSIS Toolbox onto the Control Flow design surface.
+
+3. **Configure the Script Task:**
+   - Double-click on the Script Task to open the Script Task Editor.
+   - In the Script Task Editor, click on "Edit Script".
+
+#### C# Code Explanation
+
+The script starts by setting up namespaces and defining the `College` class, which maps to the structure of the JSON response from the API. It then configures security protocols for web requests and makes a request to the API URL `http://universities.hipolabs.com/search`. The JSON response is deserialized into a list of `College` objects. For each `College` object, the script connects to the SQL Server database and inserts the data into the `University` table. If an error occurs, it logs the error to a file.
