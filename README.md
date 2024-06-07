@@ -85,7 +85,7 @@ To implement SCD Type 4 and incremental load, we'll create two target tables: `E
 
 ### SSIS Package Screenshot
 
-![SSIS Package Screenshot](screenshots/your_screenshot.png)
+![SSIS Package Screenshot](Problem2.png)
 ---
 
 ## Problem 3: Title of Problem 3
