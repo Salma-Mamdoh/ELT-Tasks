@@ -9,20 +9,21 @@ This project demonstrates how to create an ETL (Extract, Transform, Load) pipeli
     - [Problem Statement](#problem-statement)
     - [Solution](#solution)
     - [Step-by-Step Implementation](#step-by-step-implementation)
-        - [Create the Database Table](#create-the-database-table)
         - [Set Up SSIS Package](#set-up-ssis-package)
-        - [Configure the Script Task](#configure-the-script-task)
         - [C# Code Explanation](#c-code-explanation)
-        - [How to Run](#how-to-run)
     - [Prerequisites](#prerequisites)
 3. [Problem 2: Title of Problem 2](#problem-2-title-of-problem-2)
 4. [Problem 3: Title of Problem 3](#problem-3-title-of-problem-3)
 5. [Problem 4: Title of Problem 4](#problem-4-title-of-problem-4)
 6. [Conclusion](#conclusion)
 
+---
+
 ## Introduction
 
 This project demonstrates various ETL tasks using Microsoft SSIS. Each problem focuses on a different aspect of data integration, utilizing SSIS to solve these tasks efficiently.
+
+---
 
 ## Problem 1: Consuming a REST API
 
@@ -35,7 +36,6 @@ Consume any REST API and load the response to the database. You don’t have to 
 To solve this problem, we use a Script Task in SSIS and write a C# script to consume the REST API, extract the necessary fields, and load the data into the SQL Server database.
 
 ### Step-by-Step Implementation
-
 
 #### Set Up SSIS Package
 
@@ -54,3 +54,81 @@ To solve this problem, we use a Script Task in SSIS and write a C# script to con
 #### C# Code Explanation
 
 The script starts by setting up namespaces and defining the `College` class, which maps to the structure of the JSON response from the API. It then configures security protocols for web requests and makes a request to the API URL `http://universities.hipolabs.com/search`. The JSON response is deserialized into a list of `College` objects. For each `College` object, the script connects to the SQL Server database and inserts the data into the `University` table. If an error occurs, it logs the error to a file.
+
+### Prerequisites
+
+Before running the SSIS package, ensure you have the following:
+
+- SQL Server installed and configured.
+- SQL Server Integration Services (SSIS) installed.
+- Access to a REST API (for the example, we use `http://universities.hipolabs.com/search`).
+
+---
+
+## Problem 2: Title of Problem 2
+
+### Problem Statement
+
+...
+
+### Solution
+
+...
+
+### Step-by-Step Implementation
+
+...
+
+### Prerequisites
+
+...
+
+---
+
+## Problem 3: Title of Problem 3
+
+### Problem Statement
+
+...
+
+### Solution
+
+...
+
+### Step-by-Step Implementation
+
+...
+
+### Prerequisites
+
+...
+
+---
+
+## Problem 4: Title of Problem 4
+
+### Problem Statement
+
+...
+
+### Solution
+
+...
+
+### Step-by-Step Implementation
+
+...
+
+### Prerequisites
+
+...
+
+---
+
+## Conclusion
+
+In conclusion, this project demonstrates the versatility of SSIS in handling various data integration challenges. Each problem showcases a different aspect of SSIS functionality, from consuming APIs to transforming data and loading it into a database.
+
+---
+
+Feel free to adapt and expand each section according to your specific project details and requirements.
