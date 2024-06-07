@@ -13,11 +13,6 @@ This project demonstrates how to create an ETL (Extract, Transform, Load) pipeli
         - [Set Up SSIS Package](#set-up-ssis-package)
         - [Configure the Script Task](#configure-the-script-task)
         - [C# Code Explanation](#c-code-explanation)
-        - [Screenshots](#screenshots)
-            - [SSIS Package Overview](#ssis-package-overview)
-            - [Script Task Editor](#script-task-editor)
-            - [C# Script](#c-script)
-            - [SQL Server Table](#sql-server-table)
         - [How to Run](#how-to-run)
     - [Prerequisites](#prerequisites)
 3. [Problem 2: Title of Problem 2](#problem-2-title-of-problem-2)
@@ -41,16 +36,7 @@ To solve this problem, we use a Script Task in SSIS and write a C# script to con
 
 ### Step-by-Step Implementation
 
-#### Create the Database Table
 
-Create a table named `University` in your SQL Server database with the following columns:
-
-```sql
-CREATE TABLE University (
-    Name NVARCHAR(255),
-    Country NVARCHAR(255),
-    AlphaTwoCode NVARCHAR(10)
-);
 #### Set Up SSIS Package
 
 1. **Create a new SSIS package:**
