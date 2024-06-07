@@ -129,21 +129,51 @@ The solution involves using SSIS to implement a versioning strategy for loading 
 
 ---
 
-## Problem 4: Title of Problem 4
+## Problem 4: Attendance Device Data Integration
 
 ### Problem Statement
 
-...
+We have a task to read data from an attendance device in a company and load this data to a target table in a better format with a state at the end of each record as follows:
 
-### Solution
-
-...
+State Description:
+- ebn el-shrka: Arrived on time (9 am) and worked more than 8 hours
+- mo7tram: Arrived on time and worked 8 hours
+- raye2: Arrived late but worked 8 hours
+- byst3bat: Arrived on time but worked less than 8 hours
+- msh mo7tram: Arrived late and worked less than 8 hours
+- no check out: No check-out record for the employee on that day
 
 ### Step-by-Step Implementation
 
-...
+1. **Create Target Table:**
+   - **Employee_Attendance_Details:** Att_Key, Emp_ID, Date, Time_In, Time_Out, Worked_Hours, State
+
+2. **SSIS Package Overview:**
+   - **OLE DB Source:** Extracts data from `Attendance_Device`.
+   - **Data Conversion:** Ensures data types are consistent and correctly formatted.
+   - **Conditional Split:** Splits data into "in" and "out" records.
+     - **In Path:** Goes to the Aggregate component.
+     - **Out Path:** Goes to the Sort component.
+   - **Aggregate:** Groups data by Employee ID and calculates the minimum check-in time.
+   - **Sort:** Sorts data based on Employee ID and timestamp.
+   - **Merge Join:** Merges the sorted data from "in" and "out" paths.
+   - **Derived Column:** Creates new columns such as `Time_In`, `Time_Out`, and `Worked_Hours`.
+   - **Conditional Split 1:** Determines the state of each record based on arrival time and worked hours.
+   - **Derived Column 2:** Further transformations to finalize state calculation.
+   - **OLE DB Destination:** Loads the processed data into `Employee_Attendance_Details`.
+
+3. **Explanation:**
+   - **State Calculation:** Determines the state of each attendance record based on specific conditions for arrival time and worked hours.
+   - **SSIS Components Used:** Data Conversion, Conditional Split, Aggregate, Sort, Merge Join, Derived Column, and OLE DB Destination.
+
+### Screenshot
+
+![SSIS Package](SSIS_Package4.png)
 
 ---
+
+This SSIS package effectively handles the transformation of data from the attendance device to the target table, ensuring accurate calculation of work hours and state descriptions based on arrival times.
+
 
 ## Conclusion
 
