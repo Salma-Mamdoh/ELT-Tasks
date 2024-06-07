@@ -85,7 +85,7 @@ To implement SCD Type 4 and incremental load, we'll create two target tables: `E
 
 ### SSIS Package Screenshot
 
-![SSIS Package Screenshot](Problem2.png)
+![SSIS Package Screenshot](SSIS Package2.png)
 ---
 
 ## Problem 3: Load Source Data to a Target Table Using Versioning
@@ -122,7 +122,7 @@ The solution involves using SSIS to implement a versioning strategy for loading 
 
 ### Screenshot
 
-![SSIS Package](path/to/your/screenshot.png)
+![SSIS Package](SSIS Package3.png)
 
 ---
 
